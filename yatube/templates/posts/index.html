@@ -13,11 +13,13 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Последние обновления на сайте</title>
+    {%block title%}
+        <title>{{ title }}</title>
+    {%endblock%}
   </head>
   <body>
     <header>
-      {% include 'includes/header.html' %} 
+      {% include 'includes/header.html' %}
     </header>
     <main> 
       <!-- класс py-5 создает отступы сверху и снизу блока -->
@@ -94,8 +96,7 @@
     <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
     <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
     <footer class="border-top text-center py-3">
-      <!-- тег span используется для добавления нужных стилей отдельным участкам текста --> 
-      <p>© 2023 Copyright <span style="color:red">Ya</span>tube</p>    
+        {% include 'includes/footer.html' %}
     </footer>
   </body>
 </html>

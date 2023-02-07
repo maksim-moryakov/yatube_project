@@ -13,7 +13,9 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Лев Толстой – зеркало русской революции.</title>
+    {%block title%}
+      <title>{{ title }}</title>
+    {%endblock%}
   </head>
   <body>
     <header>
