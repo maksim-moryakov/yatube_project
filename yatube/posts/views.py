@@ -19,6 +19,7 @@ def group_posts(request, slug):
     title = 'Здесь будет информация о группах проекта Yatube'
     posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
     context = {
+        'group': group,
         'title': title,
         'posts': posts,
     }
