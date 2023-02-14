@@ -20,12 +20,6 @@ class PostAdmin(admin.ModelAdmin):
     settings.EMPTY_VALUE_DISPLAY
 
 
-# admin.site.register(Post, PostAdmin)
-
-
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'description')
-
-
-# admin.site.register(Group, GroupAdmin)
